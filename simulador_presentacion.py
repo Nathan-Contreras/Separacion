@@ -3,19 +3,19 @@ from scipy.optimize import fsolve, brentq
 import matplotlib.pyplot as plt
 
 # ==========================================
-# 1. DATOS DE ENTRADA (EJERCICIO BIOGÁS)
+# 1. DATOS DE ENTRADA
 # ==========================================
-zf = 0.50          # Alimentación (50% CO2)
+zf = 0.50           # Alimentación (50% CO2)
 theta_target = 0.40 # Corte de etapa (40%)
-Ph = 20.0          # Presión Alta [bar]
-Pl = 1.0           # Presión Baja [bar]
-alpha = 20.0       # Selectividad
+Ph = 20.0           # Presión Alta [bar]
+Pl = 1.0            # Presión Baja [bar]
+alpha = 20.0        # Selectividad
 
 # Relación de presiones
 r = Pl / Ph
 
 # ==========================================
-# 2. SOLVER: MEZCLA PERFECTA (Tus Diapositivas)
+# 2. fSOLVER: MEZCLA PERFECTA
 # ==========================================
 def resolver_mezcla_perfecta():
     def sistema(vars):
@@ -32,7 +32,7 @@ def resolver_mezcla_perfecta():
     return yp_mix, xr_mix
 
 # ==========================================
-# 3. SOLVER: COCORRIENTE (Simulación Paso a Paso)
+# 3. fSOLVER: COCORRIENTE (Integración Numérica)
 # ==========================================
 def resolver_cocorriente():
     # Función local de equilibrio (segura)
