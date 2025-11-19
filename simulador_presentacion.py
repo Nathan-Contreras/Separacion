@@ -27,7 +27,6 @@ def resolver_mezcla_perfecta():
         rhs = alpha * ((xr - r * yp) / ((1 - xr) - r * (1 - yp)))
         return [eq1, lhs - rhs]
 
-    # Resolver
     yp_mix, xr_mix = fsolve(sistema, [0.8, 0.2])
     return yp_mix, xr_mix
 
@@ -81,7 +80,7 @@ def resolver_cocorriente():
     return traj_theta, traj_x, traj_y_avg
 
 # ==========================================
-# 4. EJECUCIÓN Y SALIDA (VERSIÓN SIN PANDAS)
+# 4. EJECUCIÓN Y SALIDAS DE RESULTADOS
 # ==========================================
 
 # A. Calcular Mezcla Perfecta
