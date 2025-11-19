@@ -7,10 +7,10 @@ from scipy.optimize import fsolve
 import matplotlib.pyplot as plt
 
 # ==========================================
-# CONFIGURACIÓN Y DATOS FIJOS
+# DATOS DE ENTRADA
 # ==========================================
 F = 100.0          # Alimentación [mol/s]
-xf = 0.40          # Composición CO2 en alimentación
+xf = 0.50          # Composición CO2 en alimentación
 Ph = 20.0          # Presión Alimentación [bar]
 Pl = 1.0           # Presión Permeado [bar]
 alpha = 20.0       # Selectividad
